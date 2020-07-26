@@ -8,30 +8,28 @@
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="0dp"
+        android:layout_width="382dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:onClick="showToast"
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="showToast"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="0dp"
+        android:layout_width="383dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:onClick="Countup"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Count"
-        android:onClick="Countup"
-        />
+        android:textSize="60sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_toast"
+        app:layout_constraintStart_toEndOf="@+id/button_toast"
+        tools:text="Count" />
 
     <TextView
         android:id="@+id/show_count"
@@ -43,9 +41,9 @@
         android:text="@string/count_initial_value"
         android:textColor="@color/colorPrimary"
         android:textIsSelectable="false"
-        android:textSize="120sp"
+        android:textSize="200sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_count"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_toast" />
