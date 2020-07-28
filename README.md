@@ -107,3 +107,22 @@ Stage 2_2
 
    * onCreate() 안에 onRestoreInstanceState()함수를 사용하여 복구한다.
 
+Stage 2_3
+-----------
+
+* ### Implicit Intent(암시적 인텐트)
+
+  * Activity간에는 Explicit Intent(명시적 인텐트)를 사용했다.
+   하지만 별도의 APP에게 정보를 넘기려면 Implicit Intent를 사용한다.
+
+  * Intent함수에서 작업으로는 ACTION_VIEW(보기), ACTION_EDIT(편집), ACTION_DIAL(전화)가 있다.
+
+* ### URI(Uniform Resource Identifier)
+
+  * 통합 지원 식별자로 이미지, 전화번호, 주소등 여러가지 데이터를 uri형태로 얻어올 수 있다.
+ 
+* ### ShareCompat.IntentBuilder
+
+  * 위 함수로 데이터를 공유가능 하다.
+
+
