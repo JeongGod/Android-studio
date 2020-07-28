@@ -60,3 +60,7 @@ Life Cycle(생명주기)
   * 상태정보를 저장하는 함수이다.
   
   * 회전 시, Pause, Stop, Destory, create, start, resume 단계로 다시 어플이 이루어지는데, 이 때 정보를 저장해두어 create에서 저장된 정보를 불러와 유지한다.
+  
+* onRestoreInstanceState()
+
+  * onCreate() 안에 onRestoreInstanceState()함수를 사용하여 복구한다.
