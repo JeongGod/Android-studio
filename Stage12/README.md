@@ -16,12 +16,12 @@ findViewById
 
 Layout
 ---------
-* ConstraintLayout : 개체마다 구속을 걸어 만드는 layout 
+* ConstraintLayout : 개체마다 구속을 걸어 만드는 layout. 
  
-* LinearLayout : 세로 또는 가로로 배열하는 layout
+* LinearLayout : 세로 또는 가로로 배열하는 layout.
 
   * orientaion옵션을 주어 세로,가로를 선택 할 수 있다.
   
-* RelativeLayout : 상대적인 위치로 배열하는 layout
+* RelativeLayout : 상대적인 위치로 배열하는 layout.
 
   * below, above등으로 상대적인 위치를 지정한다.
