@@ -134,6 +134,34 @@ Stage 4_1
 
   * drawable폴더에 원하는 이미지를 넣어 앱을 꾸밀 수 있다.
 
+Stage 4_2
+------------
+
+* ### inputType
+
+  * EditText를 사용 할 때 타입을 지정할 수 있다.
+  * '|'를 이용하여 여러 옵션을 지정 가능하다.
+  * Options
   
+    * textAutoCorrect: 맞춤법 오류시 수정 제안.
+    * textCapSentences: 첫 문자를 대문자로 시작.
+    * textPersonName: 한 줄의 텍스트만 표시하고 완료.
+    * textMultiLine: 여러 줄의 텍스트 입력 가능.
+    * textPassword: 글자를 '*'로 숨김표시.
+    * textEmailAddress: 표준 키보드가 아닌 이메일 키보드를 표시.
+    * phone: 표준 키보드가 아닌 전화 키패드를 표시.
 
+* ### RadioGroup
+  
+  * RadioGroup을 이용하여 여러개의 RadioButton을 묶을 수 있다.
 
+  * android:checked를 이용하여 처음 화면부터 check를 할 수 있다.
+  
+* ### Spinner
+
+  * Drop-down 메뉴를 제공한다.
+
+  * ArrayAdapter를 사용하여 Spinner메뉴 항목으로 할당한다.
+  
+  * AdapterView.OnItemSelectedListener 인터페이스를 추가한다.
+    * onItemSelected, onNothingSelected라는 Callback 메소드를 활용하여 사용한다.
