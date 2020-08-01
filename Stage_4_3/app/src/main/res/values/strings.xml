@@ -49,5 +49,6 @@
     <string name="date_button">Choice date</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_order_activity">Order Activity</string>
 
 </resources>
