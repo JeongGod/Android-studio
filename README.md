@@ -1,6 +1,6 @@
 Android Studio Practice
 ========================
-Stage 1_2
+Stage 1.2
 ----------
 * ### toast
   * toast : 하단에 잠시동안 메시지를 띄워준다.
@@ -28,7 +28,7 @@ Stage 1_2
 
 
 
-Stage 1_3
+Stage 1.3
 -----------
 
 * ### ScrollView
@@ -42,7 +42,7 @@ Stage 1_3
   * 텍스트에 있는 링크를 인식하여 자동으로 하이퍼링크를 걸어준다.
 
 
-Stage 2_1
+Stage 2.1
 -----------
 
 * ### Activity
@@ -61,7 +61,7 @@ Stage 2_1
 
    * putExtra함수는 key, value값으로 이루어져 있다. 이동된 activity에서 key값을 불러오면 해당 value값을 불러온다.
 
-Stage 2_2
+Stage 2.2
 -----------
 
 * ### Life Cycle(생명주기)
@@ -107,7 +107,7 @@ Stage 2_2
 
    * onCreate() 안에 onRestoreInstanceState()함수를 사용하여 복구한다.
 
-Stage 2_3
+Stage 2.3
 -----------
 
 * ### Implicit Intent(암시적 인텐트)
@@ -125,7 +125,7 @@ Stage 2_3
 
   * 위 함수로 데이터를 공유가능 하다.
 
-Stage 4_1
+Stage 4.1
 -----------
 
 * ### drawable
@@ -134,7 +134,7 @@ Stage 4_1
 
   * drawable폴더에 원하는 이미지를 넣어 앱을 꾸밀 수 있다.
 
-Stage 4_2
+Stage 4.2
 ------------
 
 * ### inputType
@@ -165,3 +165,27 @@ Stage 4_2
   
   * AdapterView.OnItemSelectedListener 인터페이스를 추가한다.
     * onItemSelected, onNothingSelected라는 Callback 메소드를 활용하여 사용한다.
+
+Stage 4.3
+----------
+
+* ### AppBarLayout
+
+  * LinearLayout과 같이 들어오는 순서로 수직구조를 이룬다.
+  
+  * ToolBar를 설정할 수 있다. MainActivity에서 setSupportToolBar()를 호출하여 ActionBar로 만들 수 있다.
+  
+* ### main_menu.xml
+
+  * Basic Activity를 선택했을 때 생긴다.
+  * main_menu.xml에서 Option을 추가할 수 있다.
+  * android:orderInCategory 속성으로 순서를 지정할 수 있다.
+  * app:showAsAction 속성으로 Toolbar에 띄울 지 안 띄울지 정할 수 있다.
+
+* ### Alert
+  
+  * 대화상자를 띄워준다.
+
+* ### DialogFragment
+
+  * 위를 이용하여 시간/날짜 선택할 수 있는 Fragment를 띄울 수 있다.
