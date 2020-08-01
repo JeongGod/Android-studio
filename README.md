@@ -189,3 +189,20 @@ Stage 4.3
 * ### DialogFragment
 
   * 위를 이용하여 시간/날짜 선택할 수 있는 Fragment를 띄울 수 있다.
+  
+Stage 4.4
+----------
+
+![스크린샷 2020-08-01 오후 11 18 27](https://user-images.githubusercontent.com/22341452/89103502-4f866700-d44d-11ea-8a8a-4bb9dd4abd1c.png)
+
+* ### Activty간 부모/자식 설정
+
+  * 일반적인 swipe/핸드폰 내에 뒤로가기를 사용하면 가장 최근에 사용했던 화면으로 돌아간다.
+  * 부모/자식을 설정한 Activity는 App내에서 뒤로가기 버튼이 생긴다.
+  * 자식 Activity에서 뒤로가기 버튼을 누르면 부모 Activity로 돌아간다.
+
+* ### TabLayout
+
+  * Android 라이브러리에 존재한다.
+  * 형제간 이동에 용이하다.
+  * Swipe/Tab 클릭으로 탭 이동이 가능하다.
