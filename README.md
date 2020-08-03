@@ -206,3 +206,25 @@ Stage 4.4
   * Android 라이브러리에 존재한다.
   * 형제간 이동에 용이하다.
   * Swipe/Tab 클릭으로 탭 이동이 가능하다.
+  
+Stage 4.5
+----------
+
+![스크린샷 2020-08-03 오후 6 25 49](https://user-images.githubusercontent.com/22341452/89167750-c2f7b800-d5b6-11ea-88cd-a60e05f5401a.png)
+
+* ### ListView
+  * ListView는 ArrayAdapter를 활용하여 간단하고 빠르게 만들 수 있다.
+  * 다양한 item이 필요할 시 복잡한 커스터마이징이 필요하다.
+  * 애니매이션 사용이 어렵다.
+  * ViewHolder를 강제적으로 사용하지 않아 findViewById, inflate함수가 매번 호출될 수 있다.(리소스 비용이 올라간다.)
+
+* ### RecyclerView
+
+  * ListView에서 더 확장성을 가진 View이다.
+  * 강제적인 ViewHolder사용으로 View를 재사용가능하다.
+    
+    * onCreateViewHolder(ViewGroup parent, int viewType) : 뷰 홀더를 생성하고 뷰를 붙여주는 부분이다.
+    * onBindViewHolder(CustomViewHolder holder, int position) : 재활용 되는 뷰가 호출하여 실행되는 메소드, 뷰 홀더를 전달하고 어댑터는 position의 데이터를 결합시킨다.
+    * getItemCount() : 데이터의 개수 반환
+    
+  * 참고 https://woovictory.github.io/2019/01/03/Android-Diff-of-ListView-and-RecyclerView/
