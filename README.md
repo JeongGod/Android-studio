@@ -2,6 +2,7 @@ Android Studio Practice
 ========================
 Stage 1.2
 ----------
+
 * ### toast
   * toast : 하단에 잠시동안 메시지를 띄워준다.
 
@@ -228,3 +229,63 @@ Stage 4.5
     * getItemCount() : 데이터의 개수 반환
     
   * 참고 https://woovictory.github.io/2019/01/03/Android-Diff-of-ListView-and-RecyclerView/
+  
+Stage 5.1
+-----------
+
+* ### style.xml
+  * layout에서 공통되는 style이 있다면 style.xml에 지정해 코드를 간결하게 나타낼 수 있다.
+```
+<style name="ScoreButtons" parent="Widget.AppCompat.Button">
+    <item name="android:tint">@color/colorPrimary</item>
+    <item name="android:background">@drawable/button_background</item>
+</style>
+```
+
+* ### ShapeDrawable
+  * XML파일에 제공되는 기본도형이다.
+```
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+        <stroke
+            android:width="2dp"
+            android:color="@color/colorPrimary"
+            />
+</shape>
+```
+* ### android:theme
+  * AndroidMenifest.xml파일에 존재한다.
+  * APP테마의 디자인을 나타낸다.
+
+* ### AppCompatDelegate
+  * APP테마 및 디자인을 DarkMode 또는 DayMode로 전환이 가능하다.
+  * 아래 코드는 NightMode -> DayMode , DayMode -> NightMode로 사용자 설정에 따라 바뀌는 코드이다.
+
+```
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        int nightMode = AppCompatDelegate.getDefaultNightMode();
+        if(nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            menu.findItem(R.id.night_mode).setTitle(R.string.day_mode);
+        } else {
+            menu.findItem(R.id.night_mode).setTitle(R.string.night_mode);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.night_mode){
+            int nightMode = AppCompatDelegate.getDefaultNightMode();
+            if(nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            }
+            recreate();
+        }
+        return true;
+    }
+```
