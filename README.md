@@ -330,3 +330,15 @@ Stage 5.2
   });
   helper.attachToRecyclerView(mRecyclerView);
   ```
+Stage 5.3
+----------
+
+* ### 가로모드 지원
+  * New Resource File을 만들 때 orientaiton을 선택한 뒤 "land"를 고른 뒤 values를 지정하면 해당 모드에서 변경되도록 한다.
+  * GridLayoutManager 함수를 통해 2차원 스크롤 목록을 처리할 수 있다.
+  
+* ### 태블릿 모드 지원
+  * New Resource File을 만들 때 Smallest Screen Width를 선택한 뒤 숫자를 입력하면 values를 지정하면 태블릿에서의 디자인을 지정할 수 있다.
+
+* ### 다른 국가 언어 지원
+  * New Resource File을 만들 때 Locale을 선택한 뒤 국가를 선택하면 해당 국가에 맞는 언어를 지정할 수 있다.
