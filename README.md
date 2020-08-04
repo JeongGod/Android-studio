@@ -311,22 +311,22 @@ Stage 5.2
 
   * Tab, Swipe, Drag and Drop등 이벤트를 처리할 수 있게 하는 함수이다.
   ```
-          ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
-            | ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                int from = viewHolder.getAdapterPosition();
-                int to = target.getAdapterPosition();
-                Collections.swap(mSportData,from,to);
-                mAdapter.notifyItemMoved(from, to);
-                return true;
-            }
+  ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
+      | ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+      @Override
+      public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+          int from = viewHolder.getAdapterPosition();
+          int to = target.getAdapterPosition();
+          Collections.swap(mSportData,from,to);
+          mAdapter.notifyItemMoved(from, to);
+          return true;
+      }
 
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                mSportData.remove(viewHolder.getAdapterPosition());
-                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
-            }
-        });
-        helper.attachToRecyclerView(mRecyclerView);
+      @Override
+      public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+          mSportData.remove(viewHolder.getAdapterPosition());
+          mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+      }
+  });
+  helper.attachToRecyclerView(mRecyclerView);
   ```
