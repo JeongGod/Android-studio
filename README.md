@@ -289,3 +289,44 @@ Stage 5.1
         return true;
     }
 ```
+
+Stage 5.2
+-----------
+
+* ### CardView
+
+  * 이미지와 텍스트를 Card형식으로 띄워주는 View이다.
+  * Android 지원 라이브러리에 존재한다.
+  ```
+  implementation "androidx.cardview:cardview:1.0.0"
+  ```
+* ### Glide
+  
+  * 이미지를 띄우는데 직접 로드하면 Memory Resource를 낭비하게 된다.
+  * Glide라이브러리를 이용하여 이미지를 효율적으로 로드한다.
+  ```
+  implementation 'com.github.bumptech.glide:glide:3.7.0'
+  ```
+* ### ItemTouchHelper
+
+  * Tab, Swipe, Drag and Drop등 이벤트를 처리할 수 있게 하는 함수이다.
+  ```
+          ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
+            | ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                int from = viewHolder.getAdapterPosition();
+                int to = target.getAdapterPosition();
+                Collections.swap(mSportData,from,to);
+                mAdapter.notifyItemMoved(from, to);
+                return true;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                mSportData.remove(viewHolder.getAdapterPosition());
+                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        });
+        helper.attachToRecyclerView(mRecyclerView);
+  ```
