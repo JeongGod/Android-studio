@@ -68,10 +68,4 @@ public class MainActivity extends AppCompatActivity {
     public void resetSports(View view) {
         initializeData();
     }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.put
-        super.onSaveInstanceState(outState);
-    }
 }
