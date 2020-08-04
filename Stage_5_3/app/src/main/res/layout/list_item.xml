@@ -23,7 +23,7 @@
             android:padding="8dp"
             android:layout_alignBottom="@+id/sportsImage"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            style="@style/TextAppearance.AppCompat.Headline"/>
+            style="@style/SportsTitle"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
             android:padding="8dp"
             android:layout_below="@+id/sportsImage"
             android:textColor="?android:textColorSecondary"
-            style="@style/TextAppearance.AppCompat.Subhead" />
+            style="@style/SportsDetailText" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,6 +40,6 @@
             android:text="@string/sports_info_placeholder"
             android:padding="8dp"
             android:layout_below="@+id/newsTitle"
-            style="@style/TextAppearance.AppCompat.Subhead" />
+            style="@style/SportsDetailText" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
