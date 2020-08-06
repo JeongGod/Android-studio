@@ -372,3 +372,38 @@ Stage 7.1
       이 과정에서 AsyncTask는 destory되었던 Activity에서 돌아가게 되고, 새로운 Activity에는 영향을 끼치지 못 한다.
     * 이러한 상황을 해결하기 위해서는 fragment를 만들어, Activity가 destory되어도, fragment를 넘겨주어 해결이 가능하다.  
       출처 : https://webnautes.tistory.com/1086 
+
+Stage 7.2
+----------
+
+* ### Network
+  
+  * Network를 연결하려면 AndroidManifest.xml파일에 추가해야한다. (보안문제)
+  ```
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  ```
+  
+  * Network 연결 과정
+    1. Uri객체 빌드
+    2. Uri객체를 URL 객체로 변환
+    3. URL 객체 connect 및 request
+    4. response에 대한 설정
+    5. 연결해제
+
+* ### AsyncTask시 UI변경
+  
+  * 키보드 숨김
+  ```
+  InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+  if (inputManager != null ) {
+      inputManager.hideSoftInputFromWindow(view.getWindowToken(),
+      InputMethodManager.HIDE_NOT_ALWAYS);
+  }
+  ```
+
+* ### AsyncTaskLoader
+  
+  * AsyncTask의 화면 전환시에 대한 문제점 해결 => 화면 전환시에도 유지
+  
+  * LoadManager에서 제공하는 getSupportLoaderManager().initLoader() 를 이용하여 화면전환시 새로 생긴 Activity와 연결이 가능하다.
