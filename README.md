@@ -342,3 +342,26 @@ Stage 5.3
 
 * ### 다른 국가 언어 지원
   * New Resource File을 만들 때 Locale을 선택한 뒤 국가를 선택하면 해당 국가에 맞는 언어를 지정할 수 있다.
+
+Stage 7.1
+----------
+
+* ### AsyncTask
+  * AsyncTask의 동작 과정
+    
+    ![스크린샷 2020-08-06 오후 4 00 53](https://user-images.githubusercontent.com/22341452/89501261-0001bb80-d7fe-11ea-9a1d-a478db95dad9.png)
+    ![스크린샷 2020-08-06 오후 4 04 16](https://user-images.githubusercontent.com/22341452/89501548-79011300-d7fe-11ea-80c1-310abae1c213.png)
+
+    
+    * onPreExecute(): AsyncTask를 사용하기 위해 실행하는 메소드, UI메소드에서 실행이 된다.
+    * doInBackground(): 별도의 스레드에서 수행 할 작업을 실행하기위한 코드를 구현하는 위치, 중간 진행 상태를 UI에 업데이트 하려면 publishProgress() 메소드 호출.
+    * onProgressUpdate(): publishProgress()메소드가 호출되면 호출되는 메소드,UI 스레드에서 호출되며 진행률 표시 줄을 채우는 등 UI의 진행률을 업데이트하는 데 사용됩니다.
+    * onPostExecute(): doInBackground()의 return값을 파라미터로 받고, AsyncTask가 끝났을 경우 동작 구현. 
+
+  * AsyncTask의 파라미터
+  ```
+  public class MyAsyncTask extends AsyncTask <String, Integer, Bitmap>{}
+  ```
+    * String은 doInBackground()의 파라미터로 쓰인다.
+    * Integer은 onProgressUpdate()의 파라미터로 쓰인다.
+    * Bitmap은 doInBackground()의 return값으로, onPostExecute()의 파라미터로 쓰인다.
