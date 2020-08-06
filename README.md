@@ -365,3 +365,10 @@ Stage 7.1
     * String은 doInBackground()의 파라미터로 쓰인다.
     * Integer은 onProgressUpdate()의 파라미터로 쓰인다.
     * Bitmap은 doInBackground()의 return값으로, onPostExecute()의 파라미터로 쓰인다.
+    
+  * 화면 회전시 AsyncTask
+    
+    * 화면을 회전시키면 Activity는 onDestory가 된 후 다시 onCreate를 불러오게 된다.  
+      이 과정에서 AsyncTask는 destory되었던 Activity에서 돌아가게 되고, 새로운 Activity에는 영향을 끼치지 못 한다.
+    * 이러한 상황을 해결하기 위해서는 fragment를 만들어, Activity가 destory되어도, fragment를 넘겨주어 해결이 가능하다.  
+      출처 : https://webnautes.tistory.com/1086 
