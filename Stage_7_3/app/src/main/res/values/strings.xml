@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Stage_7_3</string>
+    <string name="send_broadcast">Send Custom Broadcast</string>
+</resources>
