@@ -407,3 +407,14 @@ Stage 7.2
   * AsyncTask의 화면 전환시에 대한 문제점 해결 => 화면 전환시에도 유지
   
   * LoadManager에서 제공하는 getSupportLoaderManager().initLoader() 를 이용하여 화면전환시 새로 생긴 Activity와 연결이 가능하다.
+  
+Stage 7.3
+-----------
+
+* ### Broadcast
+  * 헤드셋 연결 및 해제, 전원 연결 및 해제등 event발생 시 처리하게 한다.
+  * Android에서 기본으로 제공해준다.
+  
+  * static(정적) Broadcast : Manifest에 등록, Android 8.0(API 26) 이상부터는 일부를 제외하고는 지원하지 않는다.
+  * dynamic(동적) Broadcast : Broadcast class를 만들어 context를 통해 전달한다.
+
