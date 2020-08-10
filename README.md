@@ -418,3 +418,30 @@ Stage 7.3
   * static(정적) Broadcast : Manifest에 등록, Android 8.0(API 26) 이상부터는 일부를 제외하고는 지원하지 않는다.
   * dynamic(동적) Broadcast : Broadcast class를 만들어 context를 통해 전달한다.
 
+Stage 8.1
+-----------
+
+* ### Onclick
+
+  * "xml"파일에서 onClick=""을 지정하지 않고 "java"파일 내에서 onClick함수를 지정할 수 있다.
+  ```
+  button_notify = findViewById(R.id.notify);
+  button_notify.setOnClickListener(new View.OnClickListener() 
+      @Override
+      public void onClick(View view) {
+          sendNotification();
+      }
+  });
+  ```
+
+* ### APP에서의 알림설정
+  1\. 알림채널을 만든다.  
+  2\. 알림을 만든다.  
+  3\. 만든 알림을 알림채널에 알린다.
+  ```
+  1. createNotificationChannel()
+  2. NotificationCompat.Builder getNotificationBuilder()
+  3. mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
+  ```
+  * 해당 알림채널을 닫는다면 알림 on/off를 할 수 있다.
+  * setSmallIcon(), setContentTitle(), setContentText()등 여러가지 요소가 존재한다.
