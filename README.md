@@ -445,3 +445,24 @@ Stage 8.1
   ```
   * 해당 알림채널을 닫는다면 알림 on/off를 할 수 있다.
   * setSmallIcon(), setContentTitle(), setContentText()등 여러가지 요소가 존재한다.
+  
+Stage 8.2
+------------
+
+* ### AlarmManager
+
+  * Alarm은 채널을 만든 뒤, Alarm을 생성하여 채널에 알리는 방식  
+  * AlarmManager의 Constants(long type)
+  ```
+  AlarmManager.INTERVAL_FIFTEEN_MINUTES; // value : 900000
+               INTERVAL_HALF_DAY; // value : 43200000
+  ```
+  * Alarm을 주기적으로 전달하는 방법
+  <img width="531" alt="스크린샷 2020-08-13 오후 8 06 19" src="https://user-images.githubusercontent.com/22341452/90127642-74a99c80-dda0-11ea-934a-a52f0638b7ea.png">
+* ### 버튼 활성화
+  * Intent를 통해 주고 받는 내용이 있다면, Intent를 보냈다면 버튼이 상시 활성화(앱을 재시작해도)하는 방법
+  ```
+  boolean alarmUp = (PendingIntent.getBroadcast(this, NOTIFICATION_ID, notifyIntent,
+                PendingIntent.FLAG_NO_CREATE) != null); // 보냈는지, 안 보냈는지 확인
+  alarmToggle.setChecked(alarmUp); // 보냈다면 버튼 활성화
+  ```
