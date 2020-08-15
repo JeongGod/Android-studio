@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Stage_8_3</string>
+    <string name="cancel_jobs">Cancel Jobs</string>
+    <string name="schedule_job">Schedule Job</string>
+    <string name="wifi">Wifi</string>
+    <string name="any">Any</string>
+    <string name="none">None</string>
+    <string name="network_title">Network Type Required:</string>
+</resources>
